@@ -1,0 +1,20 @@
+/* Home.css */
+
+.home {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, #3494e6, #ec6ead);
+    min-height: 100vh;
+    color: white; /* Add this line */
+}
+
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.section h2 {
+    margin-bottom: 10px;
+}
