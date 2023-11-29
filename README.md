@@ -2,6 +2,8 @@
 
 This project is a demo of a restaurant application built with React. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+<img src="docs/mobile_readme.png" alt="Example view" width="400"/>
+
 ## Functionalities
 
 - **Login/Logout**: The application includes a login/logout system. Users can login with their credentials to access protected routes. The login state is managed globally using React Context.
