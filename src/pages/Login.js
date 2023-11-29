@@ -11,7 +11,7 @@ const Login = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (username === 'admin' && password === 'admin') {
+        if (username === process.env.REACT_APP_ADMIN_USER && password === process.env.REACT_APP_ADMIN_PASS) {
             setIsAuthenticated(true);
             navigate('/menu');
         } else {
