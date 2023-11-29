@@ -1,0 +1,7 @@
+[
+    {"name": "Menu 1: Kuracie prsia", "count": 10, "price": 5.99},
+    {"name": "Menu 2: Vyprážaná krkovička", "count": 5, "price": 6.99},
+    {"name": "Menu 3: Plnené torteliny", "count": 13, "price": 7.99},
+    {"name": "Menu 4: Miešaný šalát", "count": 15, "price": 4.99},
+    {"name": "Menu 5: Hovädzie na sečuánsky spôsob", "count": 10, "price": 8.99}
+]

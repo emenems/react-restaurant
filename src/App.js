@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React, { useState, createContext, useContext } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Home from './pages/Home';
+import Menu from './pages/Menu';
+import Stats from './pages/Stats';
+import Login from './pages/Login';
+import HamburgerMenu from './HamburgerMenu';
 
-function App() {
+export const AuthContext = createContext();
+
+const PrivateRoute = ({ children }) => {
+  const auth = useContext(AuthContext);
+  return auth.isAuthenticated ? children : <Navigate to="/login" />;
+};
+
+const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated }}>
+      <Router>
+        <HamburgerMenu />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/menu" element={<PrivateRoute><Menu /></PrivateRoute>} />
+          <Route path="/stats" element={<PrivateRoute><Stats /></PrivateRoute>} />
+        </Routes>
+      </Router>
+    </AuthContext.Provider>
   );
-}
+};
 
 export default App;

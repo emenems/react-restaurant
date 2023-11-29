@@ -1,0 +1,45 @@
+.menu-page {
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+  }
+
+.menu-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    margin: 3px 0; /* Adjust the vertical margin here */
+}
+
+.menu-item button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 300px;
+    text-align: center;
+}
+
+.menu-item button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+/* Menu.css */
+.chart-container {
+    width: 50%; /* Adjust the width here */
+    height: 30%; /* Adjust the height here */
+    margin: 0 auto; /* Center the chart */
+  }
