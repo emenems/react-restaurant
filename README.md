@@ -16,6 +16,21 @@ This project is a demo of a restaurant application built with React. It was boot
 
 ## Installation Instructions
 
+### Docker
+
+```bash
+docker build --build-arg http_proxy='http://10.255.46.226:3128' -t react-demo-restaurant:local .
+```
+
+> to build using proxies (e.g. behind corporate firewall, pass `--build-arg http_proxy='<SOME_IP>'`  
+> if you have different HTTP and HTTPS proxies, update the Dockerfile
+
+```bash
+docker run -p 3000:3000 --env-file .env --name react-demo-restaurant react-demo-restaurant:local
+```
+
+### Local
+
 1. Clone the repository to your local machine using `git clone https://github.com/emenems/react-restaurantreact-restaurant-demo.git`.
 
 2. Navigate to the project directory with `cd react-restaurant-demo`.
