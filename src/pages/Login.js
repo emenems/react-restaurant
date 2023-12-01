@@ -5,8 +5,8 @@ import './Login.css';
 
 const Login = () => {
     const { setIsAuthenticated } = useContext(AuthContext);
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('admin');
+    const [password, setPassword] = useState('admin');
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
