@@ -16,7 +16,13 @@ This project is a demo of a restaurant application built with React. It was boot
 
 ## Installation Instructions
 
+1. Clone the repository to your local machine using `git clone https://github.com/emenems/react-restaurantreact-restaurant-demo.git`.
+
+2. Navigate to the project directory with `cd react-restaurant-demo`.
+
 ### Docker
+
+1. Build image
 
 ```bash
 docker build -t react-demo-restaurant:local .
@@ -25,20 +31,18 @@ docker build -t react-demo-restaurant:local .
 > to build using proxies (e.g. behind corporate firewall, pass `--build-arg http_proxy='<SOME_IP>'`  
 > if you have different HTTP and HTTPS proxies, update the Dockerfile
 
+2. Start container
+
 ```bash
 docker run -p 3000:3000 --env-file .env --name react-demo-restaurant react-demo-restaurant:local
 ```
 
 ### Local
 
-1. Clone the repository to your local machine using `git clone https://github.com/emenems/react-restaurantreact-restaurant-demo.git`.
+1. Install the project dependencies with `npm install`.
 
-2. Navigate to the project directory with `cd react-restaurant-demo`.
+2. Start the development server with `npm start`. The application will be available at [http://localhost:3000](http://localhost:3000).
 
-3. Install the project dependencies with `npm install`.
+3. To build the application for production, use `npm run build`. The built application will be in the `build` folder.
 
-4. Start the development server with `npm start`. The application will be available at [http://localhost:3000](http://localhost:3000).
-
-5. To build the application for production, use `npm run build`. The built application will be in the `build` folder.
-
-6. To run tests, use `npm test`.
+4. To run tests, use `npm test`.
