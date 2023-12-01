@@ -19,7 +19,7 @@ This project is a demo of a restaurant application built with React. It was boot
 ### Docker
 
 ```bash
-docker build --build-arg http_proxy='http://10.255.46.226:3128' -t react-demo-restaurant:local .
+docker build -t react-demo-restaurant:local .
 ```
 
 > to build using proxies (e.g. behind corporate firewall, pass `--build-arg http_proxy='<SOME_IP>'`  
