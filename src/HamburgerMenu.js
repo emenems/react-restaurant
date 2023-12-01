@@ -26,12 +26,16 @@ const HamburgerMenu = () => {
         <div className="bar"></div>
         <div className="bar"></div>
       </div>
-
+  
       <div className={`menu ${menuActive ? 'active' : ''}`}>
         <ul>
-          <li onClick={() => navigateTo('/')}>Home</li>
-          <li onClick={() => navigateTo('/menu')}>Menu</li>
-          <li onClick={() => navigateTo('/stats')}>Stats</li>
+          <li onClick={() => navigateTo('/')}>Domov</li>
+          {isAuthenticated && (
+            <>
+              <li onClick={() => navigateTo('/menu')}>Menu Admin</li>
+              <li onClick={() => navigateTo('/stats')}>Štatistiky</li>
+            </>
+          )}
           {isAuthenticated ? <Logout /> : <li onClick={() => navigateTo('/login')}>Login</li>}
         </ul>
       </div>

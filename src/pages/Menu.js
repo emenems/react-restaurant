@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import { Bar } from 'react-chartjs-2';
-import { CategoryScale } from 'chart.js';
-import Chart from 'chart.js/auto';
 import './Menu.css';
-import mealsData from './data/menu_daily.json';
-import initialMealsData from './data/menu_daily.json';
-
-Chart.register(CategoryScale);
+import mealsData from '../data/menu_daily.json';
+import initialMealsData from '../data/menu_daily.json';
+import DailyMenuChart from '../charts/DailyMenuChart';
 
 const maxCount = Math.max(...initialMealsData.map(meal => meal.count));
 
@@ -63,7 +59,7 @@ const Menu = () => {
 
   return (
     <div className="menu-page">
-      <h1>Denné menu</h1>
+      <h1>Denné menu - objednávky</h1>
       {meals.map((meal, index) => {
         const [menu, name] = meal.name.split(':');
         return (
@@ -74,9 +70,7 @@ const Menu = () => {
           </div>
         );
       })}
-      <div className="chart-container">
-        <Bar data={data} options={options} />
-      </div>
+      <DailyMenuChart data={data} options={options} />
     </div>
   );
 };
